@@ -55,3 +55,31 @@ div.row {
 div.row > * {
   display: inline-block;
 }
+
+div.center {
+  text-align: center;
+}
+
+div.topr {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+div.bottomr {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+div.topl {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+div.bottoml {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
