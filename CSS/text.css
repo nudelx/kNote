@@ -1,0 +1,12 @@
+
+div.lorem {
+  max-width: 300px;
+  max-height: 200px;
+  overflow: auto;
+  padding: 15px 15px 0 15px;
+  position: relative;
+}
+
+div.lorem-che:after {
+  content: 'Chewbacca anakin darth organa boba vader. Mon skywalker organa darth. Sith jango wookiee skywalker darth darth. Fett solo biggs wedge. Vader antilles boba utapau gonk. Gamorrean mara fisto darth moff. Obi-wan darth leia vader fett lando chewbacca. Sidious cade leia darth tatooine ackbar hutt. Organa kenobi sebulba aayla bothan endor mace. Gonk coruscant solo gamorrean obi-wan han ben. Kit skywalker utapau skywalker palpatine leia moff kenobi. Ben obi-wan kenobi padmé boba sidious skywalker c-3p0 calamari.';
+}
