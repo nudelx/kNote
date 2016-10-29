@@ -10,7 +10,7 @@ div.page-title {
   position: static;
   top: 0px;
   height: 80px;
-  text-indent: 10px;
+  text-indent: 15px;
   font: bold 40px/80px sans-serif;
   background-color: #454545;
   color: #fafafa;
@@ -21,7 +21,7 @@ div.page-title span {
   letter-spacing: -1px;
 }
 
-div.main {
+div.box {
   border: 1px solid #ededed;
   margin-top: 50px;
   padding: 5px 20px;
@@ -35,6 +35,18 @@ div.title {
   padding: 20px 10px;
 }
 
+div.title h2 {
+  text-transform: uppercase;
+}
+
 div.content {
   padding: 20px 15px;
+}
+
+div.border {
+  border: 1px solid #ddd;
+}
+
+div.row > * {
+  display: inline-block;
 }
