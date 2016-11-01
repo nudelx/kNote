@@ -31,7 +31,13 @@ var getFilmsWithCallback = function (url,cb) {
 }
 
 function theBadAndUgly () {
-  var t = [ { url, cb }, { url: url+'dddddd', cb }, {url} ].map((item) => { getFilmsWithCallback(item.url, item.cb) })
+  
+  var t = [
+    { url, cb },
+    { url: url+'dddddd', cb },
+    {url} ].map((item) => {
+      getFilmsWithCallback(item.url, item.cb)
+    })
 
   getFilmsWithCallback(url+"1", function(text1) {
     console.log("one")
