@@ -55,6 +55,11 @@ function theBadAndUgly () {
 
 }
 
+//
+// var whenDataLoaded = getFilmsWithPromise(url)
+//
+// whenDataLoaded.then(function(data) { console.log(data)})
+
 // var t = [ { url }, { url: url+'dddddd' } ].map((item) => {
 //   getFilmsWithPromise(item.url)
 //     .then(function(){ console.log("data !!!")})
@@ -69,10 +74,3 @@ getFilmsWithPromise(url+1)
 .then(function (d) { res += JSON.parse(d).title; return getFilmsWithPromise(url+3) })
 .then(function (d) { res += JSON.parse(d).title; return getFilmsWithPromise(url+4) })
 .then(function (d) { res += JSON.parse(d).title; console.log("Done  =>>>> ",  res)})
-
-
-
-//
-// var whenDataLoaded = getFilmsWithPromise(url)
-//
-// whenDataLoaded.then(function(data) { console.log(data)})
