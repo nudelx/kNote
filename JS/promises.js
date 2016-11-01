@@ -55,9 +55,21 @@ function theBadAndUgly () {
 
 }
 
-var t = [ { url}, { url: url+'dddddd'} ].map((item) => {
-  getFilmsWithPromise(item.url).then(function(){ console.log("data !!!")}).catch(function(){ console.log("error !!!")})
-})
+// var t = [ { url }, { url: url+'dddddd' } ].map((item) => {
+//   getFilmsWithPromise(item.url)
+//     .then(function(){ console.log("data !!!")})
+//     .catch(function(){ console.log("error !!!")})
+// })
+
+// Promise.all([getFilmsWithPromise(url+1), getFilmsWithPromise(url+2), getFilmsWithPromise(url+3), getFilmsWithPromise(url+4)])
+// .then(function(d) {console.log(d)})
+var res  = ""
+getFilmsWithPromise(url+1)
+.then(function (d) { res += JSON.parse(d).title; return getFilmsWithPromise(url+2) })
+.then(function (d) { res += JSON.parse(d).title; return getFilmsWithPromise(url+3) })
+.then(function (d) { res += JSON.parse(d).title; return getFilmsWithPromise(url+4) })
+.then(function (d) { res += JSON.parse(d).title; console.log("Done  =>>>> ",  res)})
+
 
 
 //
