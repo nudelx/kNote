@@ -16,7 +16,6 @@ var getFilmsWithPromise = function (url) {
   })
 }
 
-
 var getFilmsWithCallback = function (url,cb) {
   var xhr = new XMLHttpRequest();
   xhr.onload = function() {
