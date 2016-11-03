@@ -8,7 +8,7 @@ var getFilmsWithPromise = function (url) {
       if (xhr.readyState == XMLHttpRequest.DONE && this.status === 200) {
           yes(xhr.response)
       } else {
-          no("jopa")
+          no("ooopsss !!")
       }
     }
     xhr.open('GET', url, true);
@@ -62,21 +62,20 @@ function theBadAndUgly () {
 
 function theGoodAndPretty () {
 
-  var whenDataLoaded = getFilmsWithPromise(url)
+  // var whenDataLoaded = getFilmsWithPromise(url)
+  // whenDataLoaded.then(function(data) { console.log(data)})
 
-  whenDataLoaded.then(function(data) { console.log(data)})
+  // var t = [ { url }, { url: url+'dddddd' } ].map((item) => {
+  //   getFilmsWithPromise(item.url)
+  //     .then(function(){ console.log("data !!!")})
+  //     .catch(function(e){ console.log("error !!!" + e)})
+  // })
 
-  var t = [ { url }, { url: url+'dddddd' } ].map((item) => {
-    getFilmsWithPromise(item.url)
-      .then(function(){ console.log("data !!!")})
-      .catch(function(){ console.log("error !!!")})
-  })
+  // Promise.all([getFilmsWithPromise(url+"1"), getFilmsWithPromise(url+2), getFilmsWithPromise(url+3), getFilmsWithPromise(url+4)])
+  // .then(function(d) {console.log(d)})
 
 
-
-  Promise.all([getFilmsWithPromise(url+1), getFilmsWithPromise(url+2), getFilmsWithPromise(url+3), getFilmsWithPromise(url+4)])
-  .then(function(d) {console.log(d)})
-  var res  = ""
+  var res = ""
   getFilmsWithPromise(url+1)
   .then(function (d) { res += JSON.parse(d).title; return getFilmsWithPromise(url+2) })
   .then(function (d) { res += JSON.parse(d).title; return getFilmsWithPromise(url+3) })
@@ -86,3 +85,4 @@ function theGoodAndPretty () {
 
 
 // theBadAndUgly()
+theGoodAndPretty()
