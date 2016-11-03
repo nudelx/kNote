@@ -72,6 +72,8 @@ function theGoodAndPretty () {
       .catch(function(){ console.log("error !!!")})
   })
 
+
+
   Promise.all([getFilmsWithPromise(url+1), getFilmsWithPromise(url+2), getFilmsWithPromise(url+3), getFilmsWithPromise(url+4)])
   .then(function(d) {console.log(d)})
   var res  = ""
@@ -83,4 +85,4 @@ function theGoodAndPretty () {
 }
 
 
-theBadAndUgly()
+// theBadAndUgly()
