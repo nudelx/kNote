@@ -32,12 +32,12 @@ var getFilms = function (url,cb) {
 
 function theBadAndUgly () {
 
-  var t = [
-    { url, cb },
-    { url: url+'dddddd', cb },
-    {url} ].map((item) => {
-      getFilms(item.url, item.cb)
-    })
+  // var t = [
+  //   { url, cb },
+  //   { url: url+'dddddd', cb },
+  //   {url} ].map((item) => {
+  //     getFilms(item.url, item.cb)
+  //   })
 
   getFilms(url+"1", function(text1) {
     console.log("one")
@@ -51,7 +51,7 @@ function theBadAndUgly () {
           + JSON.parse(text2).title + " | "
           + JSON.parse(text3).title + " | "
           + JSON.parse(text4).title
-          //TODO :: add error handeling :)
+          //TODO :: add error handling :)
          )
         })
       })
@@ -81,3 +81,6 @@ function theGoodAndPretty () {
   .then(function (d) { res += JSON.parse(d).title; return getFilmsWithPromise(url+4) })
   .then(function (d) { res += JSON.parse(d).title; console.log("Done  =>>>> ",  res)})
 }
+
+
+theBadAndUgly()
