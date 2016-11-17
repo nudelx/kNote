@@ -81,8 +81,17 @@ function theGoodAndPretty () {
   .then(function (d) { res += JSON.parse(d).title; return getFilmsWithPromise(url+3) })
   .then(function (d) { res += JSON.parse(d).title; return getFilmsWithPromise(url+4) })
   .then(function (d) { res += JSON.parse(d).title; console.log("Done  =>>>> ",  res)})
+
+
+  // var setValue = function (resp) { debugger ; res+= JSON.parse(resp).title }
+
+  // var test =  getFilmsWithPromise(url+1)
+  // .then(  (d) => { setValue(d); return getFilmsWithPromise(url+2) } )
+  //.then(  (d) => { setValue(d); return getFilmsWithPromise(url+3) } )
+  .then(  (d) => { setValue(d); return getFilmsWithPromise(url+4) }  )
+  .then( console.log("Done ES6 =>>>> ",  res))
 }
 
 
-// theBadAndUgly()
-theGoodAndPretty()
+// theBadAndUgly();
+ theGoodAndPretty();
