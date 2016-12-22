@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example</title>
+</head>
+<body>
+  <style media="screen">
+    label {
+      display: block;
+      color: #aaa;
+      cursor: pointer;
+    }
+    ul.formlist {
+      margin: 0px;
+      padding: 0px;
+      list-style: none;
+    }
+
+    ul.formlist li {
+      margin: 10px 0px;
+    }
+
+    ul.formlist textarea {
+      width:400px;
+      height:100px;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      display: inline-block;
+      width: 420px;
+    }
+    legend {
+      color: #ccc;
+    }
+    fieldset.gender label{
+      display: inline-block;
+    }
+
+    select[name="caracters"] {
+      width: 300px;
+    }
+  </style>
+
+<form action="some_script.rb" method='post'>
+<fieldset>
+<legend>Personal</legend>
+<ul class="formlist">
+  <li>
+    <label for="name">Name</label>
+    <input id="name" name="name" value="" />
+  </li>
+  <li>
+    <label for="pass">Password</label>
+    <input id="pass" name="pass" value="" />
+  </li>
+  <li>
+    <label for="Description">Description</label>
+    <textarea id="Description" width="300px"></textarea>
+  </li>
+</ul>
+</fieldset>
+<ul class="formlist">
+  <li>
+    <fieldset class="gender">
+      <legend>Gender</legend>
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="male" value="male">
+      <label for="female">Female</label>
+      <input type="radio" name="gender" id="female" value="female">
+    </fieldset>
+  </li>
+
+  <li>
+    <fieldset class="Selection">
+      <legend>Selection</legend>
+      <select name="caracters" >
+        <optgroup label="Jedi">
+          <option value="Luke">Luke</option>
+          <option value="Obi">Obi Wan</option>
+          <option value="Lea">Lea</option>
+          <option value="R2d2">R2d2</option>
+        </optgroup >
+        <optgroup label="Sith">
+          <option value="Darth Maul">Darth Maul</option>
+          <option value="Sidious">Sidious</option>
+          <option value="Darth Tyranus.">Darth Tyranus.</option>
+          <option value="Dathomir">Dathomir</option>
+        </optgroup >
+      </select>
+    </fieldset>
+  </li>
+</ul>
+    <div>
+      <input type="checkbox" name="type" id="jedi" value="jedi"> Jedi
+      <input type="checkbox" name="type" id="sith" value="sith"> Sith
+      <input type="button" value="cancel">
+      <input type="submit" value="Submit">
+      <input type="reset" value="reset">
+  </div>
+  </form>
+</body>
+</html>
