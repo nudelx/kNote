@@ -44,8 +44,6 @@ div.content {
   padding: 20px 15px;
 }
 
-
-
 div.row {
   position: relative;
 }
@@ -102,4 +100,62 @@ ul.planets li {
   font-size: 24px;
   width: 100px;
   padding-left: 70px;
+}
+
+ul.fonts li {
+  line-height: 32px;
+  padding-left: 10px;
+}
+
+ul.fonts li.font-it {
+  font-style: italic;
+}
+
+ul.fonts li.small-caps {
+  font-variant: small-caps;
+}
+
+ul.fonts li.w-400 {
+  font-weight: 400;
+}
+
+ul.fonts li.w-500 {
+  font-weight: 500;
+}
+
+ul.fonts li.w-600 {
+  font-weight: 600;
+}
+
+ul.fonts li.mono {
+  font-family: monospace;
+}
+
+/*text*/
+
+ul.text li {
+  padding: 5px 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  width: auto;
+}
+
+ul.text li.cap {
+  text-transform: uppercase;
+}
+
+ul.text li.underline {
+  text-decoration: underline;
+}
+
+ul.text li.through {
+  text-decoration:line-through;
+}
+
+ul.text li.space-wrap {
+  white-space: normal;;
+}
+
+ul.text li.space-nowrap {
+  white-space: nowrap;
 }
