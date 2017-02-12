@@ -44,9 +44,7 @@ div.content {
   padding: 20px 15px;
 }
 
-div.border {
-  border: 1px solid #ddd;
-}
+
 
 div.row {
   position: relative;
@@ -84,6 +82,24 @@ div.bottoml {
   left: 0px;
 }
 
+div.border {
+  border: 1px solid #ddd;
+}
+
 div.bg-color-red {
   background-color: red;
+}
+
+ul.planets {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul.planets li {
+  cursor: pointer;
+  list-style: none;
+  line-height: 64px;
+  font-size: 24px;
+  width: 100px;
+  padding-left: 70px;
 }
