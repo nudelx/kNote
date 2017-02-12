@@ -83,3 +83,7 @@ div.bottoml {
   bottom: 0px;
   left: 0px;
 }
+
+div.bg-color-red {
+  background-color: red;
+}
