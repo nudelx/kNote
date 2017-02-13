@@ -8,7 +8,7 @@ var getFilmsWithPromise = function (url) {
       if (xhr.readyState == XMLHttpRequest.DONE && this.status === 200) {
           yes(xhr.response)
       } else {
-          no("jopa")
+          no("ooopsss !!")
       }
     }
     xhr.open('GET', url, true);
@@ -16,7 +16,7 @@ var getFilmsWithPromise = function (url) {
   })
 }
 
-var getFilmsWithCallback = function (url,cb) {
+var getFilms = function (url,cb) {
   var xhr = new XMLHttpRequest();
   xhr.onload = function() {
     if (xhr.readyState == XMLHttpRequest.DONE && this.status === 200) {
@@ -31,27 +31,27 @@ var getFilmsWithCallback = function (url,cb) {
 }
 
 function theBadAndUgly () {
-  
-  var t = [
-    { url, cb },
-    { url: url+'dddddd', cb },
-    {url} ].map((item) => {
-      getFilmsWithCallback(item.url, item.cb)
-    })
 
-  getFilmsWithCallback(url+"1", function(text1) {
+  // var t = [
+  //   { url, cb },
+  //   { url: url+'dddddd', cb },
+  //   {url} ].map((item) => {
+  //     getFilms(item.url, item.cb)
+  //   })
+
+  getFilms(url+"1", function(text1) {
     console.log("one")
-    getFilmsWithCallback(url+"2", function(text2) {
+    getFilms(url+"2", function(text2) {
       console.log("two")
-      getFilmsWithCallback(url+"3", function(text3) {
+      getFilms(url+"3", function(text3) {
         console.log("tree")
-        getFilmsWithCallback(url+"4", function(text4) {
+        getFilms(url+"4", function(text4) {
           console.log( "Yes !!! we got the movies !!!  => "
           + JSON.parse(text1).title + " | "
           + JSON.parse(text2).title + " | "
           + JSON.parse(text3).title + " | "
           + JSON.parse(text4).title
-          //TODO :: add error handeling :)
+          //TODO :: add error handling :)
          )
         })
       })
@@ -60,22 +60,38 @@ function theBadAndUgly () {
 
 }
 
-//
-// var whenDataLoaded = getFilmsWithPromise(url)
-//
-// whenDataLoaded.then(function(data) { console.log(data)})
+function theGoodAndPretty () {
 
-// var t = [ { url }, { url: url+'dddddd' } ].map((item) => {
-//   getFilmsWithPromise(item.url)
-//     .then(function(){ console.log("data !!!")})
-//     .catch(function(){ console.log("error !!!")})
-// })
+  // var whenDataLoaded = getFilmsWithPromise(url)
+  // whenDataLoaded.then(function(data) { console.log(data)})
 
-// Promise.all([getFilmsWithPromise(url+1), getFilmsWithPromise(url+2), getFilmsWithPromise(url+3), getFilmsWithPromise(url+4)])
-// .then(function(d) {console.log(d)})
-var res  = ""
-getFilmsWithPromise(url+1)
-.then(function (d) { res += JSON.parse(d).title; return getFilmsWithPromise(url+2) })
-.then(function (d) { res += JSON.parse(d).title; return getFilmsWithPromise(url+3) })
-.then(function (d) { res += JSON.parse(d).title; return getFilmsWithPromise(url+4) })
-.then(function (d) { res += JSON.parse(d).title; console.log("Done  =>>>> ",  res)})
+  // var t = [ { url }, { url: url+'dddddd' } ].map((item) => {
+  //   getFilmsWithPromise(item.url)
+  //     .then(function(){ console.log("data !!!")})
+  //     .catch(function(e){ console.log("error !!!" + e)})
+  // })
+
+  // Promise.all([getFilmsWithPromise(url+"1"), getFilmsWithPromise(url+2), getFilmsWithPromise(url+3), getFilmsWithPromise(url+4)])
+  // .then(function(d) {console.log(d)})
+
+
+  var res = ""
+  getFilmsWithPromise(url+1)
+  .then(function (d) { res += JSON.parse(d).title; return getFilmsWithPromise(url+2) })
+  .then(function (d) { res += JSON.parse(d).title; return getFilmsWithPromise(url+3) })
+  .then(function (d) { res += JSON.parse(d).title; return getFilmsWithPromise(url+4) })
+  .then(function (d) { res += JSON.parse(d).title; console.log("Done  =>>>> ",  res)})
+
+
+  // var setValue = function (resp) { debugger ; res+= JSON.parse(resp).title }
+
+  // var test =  getFilmsWithPromise(url+1)
+  // .then(  (d) => { setValue(d); return getFilmsWithPromise(url+2) } )
+  //.then(  (d) => { setValue(d); return getFilmsWithPromise(url+3) } )
+  .then(  (d) => { setValue(d); return getFilmsWithPromise(url+4) }  )
+  .then( console.log("Done ES6 =>>>> ",  res))
+}
+
+
+// theBadAndUgly();
+ theGoodAndPretty();

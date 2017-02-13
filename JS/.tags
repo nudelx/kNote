@@ -1,0 +1,12 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+cb	promises.js	/^var cb  = function () { console.log('I am a callback !!', arguments)}$/;"	f
+getFilms	promises.js	/^var getFilms = function (url,cb) {$/;"	f
+getFilmsWithPromise	promises.js	/^var getFilmsWithPromise = function (url) {$/;"	f
+theBadAndUgly	promises.js	/^function theBadAndUgly () {$/;"	f
+url	promises.js	/^var url = 'http:\/\/swapi.co\/api\/films\/';$/;"	v
+xhr.onload	promises.js	/^  var xhr = new XMLHttpRequest();$/;"	f
