@@ -80,13 +80,18 @@ div.bottoml {
   left: 0px;
 }
 
+div.bg-color-red {
+  background-color: red;
+}
+
+div.border-green {
+  border: 5px solid green;
+}
+
 div.border {
   border: 1px solid #ddd;
 }
 
-div.bg-color-red {
-  background-color: red;
-}
 
 ul.planets {
   margin: 0px;
