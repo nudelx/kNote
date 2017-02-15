@@ -224,3 +224,33 @@ div.box_128_128 {
   height: 128px;
   display: block;
 }
+
+/*border*/
+
+div.border-ridge-5 {
+  border-color: red;
+  border-style: ridge;
+  border-width: 5px;
+}
+
+div.border-dashed-5 {
+  border-color: red;
+  border-style: dashed;
+  border-width: 5px;
+}
+
+div.border-double-5 {
+  border: 5px double red;
+}
+
+div.border-groove-5 {
+  border: 5px groove red;
+}
+
+div.border-dotted-5 {
+  border: 5px dotted red;
+}
+
+div.border-outset-5 {
+  border: 5px outset red;
+}
