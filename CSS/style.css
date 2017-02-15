@@ -254,3 +254,26 @@ div.border-dotted-5 {
 div.border-outset-5 {
   border: 5px outset red;
 }
+
+div.tiny {
+  width: 900px;
+  background-color: #0099CC;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+div.tiny div.green {
+  background-color: #00CC99;
+}
+
+div.tiny div.m1{
+  margin: 30px;
+}
+
+div.tiny div.m2{
+  margin: 30px 20px;
+}
+
+div.tiny div.m3{
+  margin: 30px 20px 10px;
+}
