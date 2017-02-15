@@ -7,6 +7,10 @@ div.lorem {
   position: relative;
 }
 
-div.lorem-che:after {
+div.lorem-che::after {
   content: 'Chewbacca anakin darth organa boba vader. Mon skywalker organa darth. Sith jango wookiee skywalker darth darth. Fett solo biggs wedge. Vader antilles boba utapau gonk. Gamorrean mara fisto darth moff. Obi-wan darth leia vader fett lando chewbacca. Sidious cade leia darth tatooine ackbar hutt. Organa kenobi sebulba aayla bothan endor mace. Gonk coruscant solo gamorrean obi-wan han ben. Kit skywalker utapau skywalker palpatine leia moff kenobi. Ben obi-wan kenobi padmé boba sidious skywalker c-3p0 calamari. Kenobi antilles ventress jade fett padmé jawa padmé skywalker. Moff darth c-3po ponda tatooine hutt leia wampa r2-d2. Ahsoka dooku wicket jade moff ahsoka. Darth antilles utapau moff luuke luuke kit jango. Antilles hutt lobot antilles skywalker mustafar. Tusken raider fisto palpatine skywalker solo. Fett moff skywalker skywalker ponda bespin wookiee tatooine. R2-d2 obi-wan darth hutt. Jango binks palpatine yavin darth. Yavin ewok owen leia sidious moff lars vader. Darth hutt tusken raider fett.';
+}
+
+div.lorem-che::before {
+  content: 'RRRRR --- ';
 }

@@ -95,6 +95,8 @@ div.border-green {
   border: 5px solid green;
 }
 
+/*planets*/
+
 ul.planets {
   margin: 0px;
   padding: 0px;
@@ -212,6 +214,13 @@ ul.links a:active {
 div.test + div {
   border: 2px solid red;
 }
+
 div[name*="test1"] {
   border: 2px solid red;
+}
+
+div.box_128_128 {
+  width: 800px;
+  height: 128px;
+  display: block;
 }
