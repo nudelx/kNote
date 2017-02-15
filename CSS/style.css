@@ -255,6 +255,8 @@ div.border-outset-5 {
   border: 5px outset red;
 }
 
+/*margin*/
+
 div.tiny {
   width: 900px;
   background-color: #0099CC;
@@ -276,4 +278,29 @@ div.tiny div.m2{
 
 div.tiny div.m3{
   margin: 30px 20px 10px;
+}
+
+/*padding*/
+
+div.short {
+  width: 128px;
+  height: 128px;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+div.short div {
+  background-position: center center;;
+}
+
+div.tiny div.p1{
+  padding: 30px;
+}
+
+div.tiny div.p2{
+  padding: 30px 20px;
+}
+
+div.tiny div.p3{
+  padding: 30px 20px 10px;
 }
