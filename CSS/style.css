@@ -21,6 +21,8 @@ div.page-title span {
   letter-spacing: -1px;
 }
 
+
+
 div.box {
   border: 1px solid #EBEFC9;
   margin-top: 50px;
@@ -84,14 +86,14 @@ div.bg-color-red {
   background-color: red;
 }
 
-div.border-green {
-  border: 5px solid green;
-}
 
 div.border {
   border: 1px solid #ddd;
 }
 
+div.border-green {
+  border: 5px solid green;
+}
 
 ul.planets {
   margin: 0px;
@@ -205,4 +207,11 @@ ul.links a:active {
   color: #88C13E;
   -webkit-transition: all 1.3s ease-in-out;
   -webkit-transform: rotate(360deg) scale(1.3)
+}
+
+div.test + div {
+  border: 2px solid red;
+}
+div[name*="test1"] {
+  border: 2px solid red;
 }
