@@ -11,10 +11,42 @@
     <link rel="stylesheet" href="text.css" type="text/css">
     <link rel="stylesheet" href="style.css" type="text/css">
   </head>
+  <script type="text/javascript">
+
+    function addPopUp () {
+      var body = document.querySelector('body');
+      var popUpHolder = document.createElement('div');
+      popUpHolder.setAttribute('class', 'popUpHolder');
+
+      var fog = document.createElement('div');
+      fog.setAttribute('class', 'fog');
+
+      var content = document.createElement('div');
+      content.setAttribute('class', 'popupPosition');
+
+      var txt = document.createElement('div');
+      txt.classList.add('popuptxt','loremText');
+
+      var close = document.createElement('div');
+      close.classList.add('close-btn')
+      var x = document.createTextNode("X");
+      close.appendChild(x);
+      txt.appendChild(close);
+
+      close.addEventListener('click', function () {popUpHolder.remove()})
+
+      content.appendChild(txt)
+      popUpHolder.appendChild(fog)
+      popUpHolder.appendChild(content);
+      body.appendChild(popUpHolder);
+    }
+
+  </script>
+
   <body>
     <div class="page-title">CSS Sandbox <span>by Nudelman Alex</span></div>
 
-    <div class="box">
+    <!-- <div class="box">
       <div class="title"><h2>Backgrounds</h2></div>
       <div class="content">
         <div class="row test">
@@ -194,35 +226,26 @@
     </div>
 
     <div class="box">
-      <div class="title"><h2>Position: static</h2></div>
+      <div class="title"><h2>Positioning absolute</h2></div>
       <div class="content">
-        <div class="row">
-          <div class="icon r2d2 border"></div>
-          <div class="icon vader border"></div>
-          <div class="icon deathstar border"></div>
-          <div class="icon ship border"></div>
-          <div class="lorem lorem-che border"></div>
-        </div>
+        <div class="icon r2d2 border position-a"></div>
+        <div class="icon vader border position-b"></div>
+        <div class="icon deathstar border position-c"></div>
+        <div class="icon ship border position-d"></div>
+        <div class="icon deathstar border position-e"></div>
+        <div class="icon vader border position-f"></div>
+        <div class="icon r2d2 border position-g"></div>
+      </div>
+    </div> -->
+
+    <div class="box">
+      <div class="title"><h2>Positioning fixed</h2></div>
+      <div class="content">
+        <button class="press-btn imperia-logo" onclick="addPopUp()"></button>
       </div>
     </div>
 
-      <div class="box" id="p_absolute">
-        <div class="title"><h2>Position: absolute</h2></div>
-        <div class="content">
-          <div class="row border center">
-            <div class="icon r2d2 border topr"></div>
-            <div class="icon vader border bottomr"></div>
-            <div class="icon deathstar border topl"></div>
-            <div class="icon ship border bottoml"></div>
-            <div class="lorem lorem-che border"></div>
-            <div class="icon r2d2 border topr"></div>
-            <div class="icon vader border bottomr"></div>
-            <div class="icon deathstar border topl"></div>
-            <div class="icon ship border bottoml"></div>
-            <div class="lorem lorem-che border"></div>
-          </div>
-        </div>
-      </div>
+
   </body>
 </html>
 <!-- https://habrahabr.ru/post/281254/ -->
