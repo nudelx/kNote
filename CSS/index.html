@@ -13,7 +13,7 @@
   </head>
   <script type="text/javascript">
 
-    function addPopUp () {
+    function addPopUp (view) {
       var body = document.querySelector('body');
       var popUpHolder = document.createElement('div');
       popUpHolder.setAttribute('class', 'popUpHolder');
@@ -30,6 +30,9 @@
       var close = document.createElement('div');
       close.classList.add('close-btn')
       var x = document.createTextNode("X");
+      if (view) {
+        txt.appendChild(view);
+      }
       close.appendChild(x);
       txt.appendChild(close);
 
