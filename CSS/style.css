@@ -332,3 +332,41 @@ div.outline-green {
 div.vis-hide {
   visibility: hidden;
 }
+
+div.position-a {
+  position: relative;
+  left: 20px;
+}
+
+div.position-b {
+  position: relative;
+  left: 150px;
+}
+
+div.position-c {
+  position: relative;
+  left: 280px;
+}
+
+div.position-d {
+  position: relative;
+  left: 410px;
+}
+
+div.position-e {
+  position: relative;
+  left: 540px;
+  top: -260px;
+}
+
+div.position-f {
+  position: relative;
+  left: 670px;
+  top: -520px;
+}
+
+div.position-g {
+  position: relative;
+  left: 800px;
+  top: -780px;
+}
