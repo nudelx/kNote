@@ -403,7 +403,7 @@ div.position-g {
 
 .popupPosition {
   /*border: 1px solid red;*/
-  position: fixed;
+  position: absolute;
   font-size: 33px;
   z-index: 300;
   top: 20%;
