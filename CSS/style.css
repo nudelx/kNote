@@ -304,3 +304,31 @@ div.tiny div.p2{
 div.tiny div.p3{
   padding: 30px 20px 10px;
 }
+
+div.cursors div {
+  color: #668099;
+  border: 1px solid #ccc;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  margin: 3px;
+
+}
+
+div.outline-red {
+  outline: 2px dashed red;
+}
+
+div.outline-blue {
+  outline: 2px double blue;
+}
+
+div.outline-green {
+  outline: 2px solid green;
+}
+
+div.vis-hide {
+  visibility: hidden;
+}
