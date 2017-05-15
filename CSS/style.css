@@ -329,6 +329,18 @@ div.outline-green {
   outline: 2px solid green;
 }
 
+div.shadow-red {
+  box-shadow: 0px 0px 48px 7px red;
+}
+
+div.shadow-blue {
+box-shadow: 0px 0px 48px 7px blue;
+}
+
+div.shadow-green {
+  box-shadow: 0px 0px 48px 7px green;
+}
+
 div.vis-hide {
   visibility: hidden;
 }
