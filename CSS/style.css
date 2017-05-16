@@ -448,3 +448,25 @@ div.position-g {
   /*right: 0px;*/
   cursor: pointer;
 }
+
+div.table {
+  display: table;
+  border: 1px dashed #ccc;
+  width: 100%;
+  text-align: center;
+}
+
+div.table-row-header, div.table-row {
+  display: table-row;
+  text-transform: uppercase;
+
+}
+
+div.table-row-header {
+  background-color: #ddd;
+}
+
+div.cell {
+  display: table-cell;
+  border: 1px dashed #ccc;
+}
