@@ -1,5 +1,10 @@
 .flex-box {
-  /*display: flex;
-  flex-direction:row;*/
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+}
 
+.flex-order {
+  justify-content: space-around;
+  align-items: flex-end;
 }
